@@ -1,0 +1,15 @@
+---
+- name: Prepare
+  hosts: all
+  become: yes
+  gather_facts: yes
+  roles:
+    - robertdebock.bootstrap
+
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+  roles:
+    - lbischof.pass
+    #- ansible-role-pass

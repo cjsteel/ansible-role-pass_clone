@@ -1,0 +1,7 @@
+---
+
+- name: Install dependencies
+  apt:
+    name: "{{item}}"
+  become: yes
+  with_items: "{{pass_packages}}"
